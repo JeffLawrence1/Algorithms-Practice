@@ -1,0 +1,77 @@
+// Parens Valid
+
+function parensValid(str){
+  var count = 0; 
+  for( let i = 0; i < str.length; i++ ){
+    if(str[i] === "("){
+      count += 1;
+    }
+    if(str[i] === ")"){
+      count -= 1;
+    }
+  }
+  if(count != 0){
+    return false;
+  }
+  else{
+    return true;
+  }
+}
+console.log(parensValid("lkj(sdf)fsdf(fsdff)0s)"));
+console.log(parensValid("lkj(sdf)fsd(f(fsdff)0s)"));
+
+// Braces Valid
+
+function bracesValid(str){
+  
+  var count = 0; 
+  var count1 = 0;
+  var count2 = 0;
+  
+  for( let i = 0; i < str.length; i++ ){
+    if(str[i] === "("){
+      count += 1;
+    }
+    if(str[i] === ")"){
+      count -= 1;
+    }
+    if(str[i] === "{"){
+      count1 += 1;
+    }
+    if(str[i] === "}"){
+      count1 -= 1;
+    }
+    if(str[i] === "["){
+      count2 += 1;
+    }
+    if(str[i] === "]"){
+      count2 -= 1;
+    }
+  }
+  if(count != 0 || count1 != 0 || count2 != 0){
+    return false;
+  }
+  else{
+    return true;
+  }
+}
+console.log(bracesValid("lkj(s{df)f}sd[f(fs}]dff)0s)"));
+console.log(bracesValid("lkj(sdf{})fs[d(f(f]sdff)0s)"));
+
+//Is Palindrome
+
+function isPalindrome(str){
+  var newStr = "";
+  for(let i = str.length - 1; i >=0; i--){
+    newStr += str[i];
+  }
+  if(newStr === str){
+    return true;
+  }
+  else{
+    return false;
+  }
+}
+console.log(isPalindrome("tacocat"));
+console.log(isPalindrome("tacoCat"));
+

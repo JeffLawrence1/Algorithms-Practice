@@ -1,0 +1,93 @@
+function sll(){
+  this.head = null;
+}
+
+function newNode(val){
+  this.next = null;
+  this.val = val;
+}
+
+node = new newNode(0);
+node1 = new newNode(1);
+node2 = new newNode(2);
+
+node.next = node1;
+node1.next = node2;
+
+//console.log(node);
+
+var mySll = new sll();
+mySll.head = node;
+//console.log(mySll);
+
+//length
+
+function length(list){
+  var nodeCount = 0;
+  if(list){
+    var cur = list.head;
+    while(cur.next != null){
+      nodeCount += 1;
+      cur = cur.next;
+    }
+    return nodeCount;
+  }
+  return false;
+}
+console.log(length(mySll));
+
+//average
+
+function average(list){
+  var sum = 0;
+  var nodeCount = 0;
+  if(list){
+    var cur = list.head;
+    while(cur.next != null){
+      sum += cur.val;
+      nodeCount += 1;
+      cur = cur.next;
+    }
+    return sum / nodeCount;
+  }
+  return false;
+}
+console.log(average(mySll));
+
+//min, max
+
+function minMax(list){
+  var min = 0;
+  var max = 0;
+  if(list){
+    var cur = list.head;
+    while(cur != null){
+      if(min > cur.val){
+        min = cur.val;
+      }
+      if(max < cur.val){
+        max = cur.val;
+      }
+      cur = cur.next;
+    }
+    return [min, max];
+  }
+  return false;
+}
+console.log(minMax(mySll));
+
+//display
+
+function display(list){
+  var myString = "";
+  if(list){
+    var cur = list.head;
+    while(cur != null){
+      myString += cur.val;
+      cur = cur.next;
+    }
+    return myString;
+  }
+  return false;
+}
+console.log(display(mySll));

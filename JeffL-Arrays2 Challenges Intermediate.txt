@@ -1,0 +1,44 @@
+
+
+//arrConcat
+
+function arrConcat(arr1, arr2){
+  for(let i = 0; i < arr2.length; i++){
+    arr1.push(arr2[i]);
+  }
+  return arr1;
+}
+console.log(arrConcat([1, 3, 5, 7], [2, 4, 6, 8]));
+
+//faster factorial
+
+function fasterFactorial(num){
+  let sum = 1;
+  if(num >= 2){   
+  for(let i =2; i <= num; i++){
+    sum *= i;
+  }
+    return sum;
+  }
+  
+  else{
+    return "pick a higher number";
+  }
+}
+console.log(fasterFactorial(5));
+
+//shuffle
+
+function shuffleUp(arr){
+  var tempArr = [];
+  while(arr.length > 0){
+   var rando = Math.floor((Math.random() * arr.length - 1) + 1)
+   tempArr.push(arr[rando]);
+     for(let j = rando; j < arr.length; j++){
+       arr[j] = arr[j+1];
+     }
+     arr.pop()
+   }
+  return tempArr;
+}
+console.log(shuffleUp([1, 2, 3, 4, 5]));

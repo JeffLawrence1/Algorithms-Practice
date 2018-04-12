@@ -1,0 +1,57 @@
+//Arrs2Map
+
+function arrs2Map(arr1, arr2){
+  var newDict = {};
+  for(let i = 0; i < arr1.length; i++){
+    newDict[arr1[i]] = arr2[i];
+  }
+  return newDict;
+}
+console.log(arrs2Map(["one", "two", "three"], [1, 2, 3]));
+
+//InvertHash
+
+function invertHash(dict){
+  let dict2 = {};
+  for(let key in dict){
+    dict2[dict[key]] = key;
+  }
+  return dict2;
+}
+console.log(invertHash({key1: "one", key2: "two", key3: "three"}));
+
+//myJoin
+
+function myJoin(arr){
+  var newString ="";
+  for(let i = 0; i < arr.length; i++){
+    newString += arr[i];
+  }
+  return newString;
+}
+console.log(myJoin(["A", "B", "C"]));
+
+//mySplit
+
+function mySplit(str){
+  var newArr = [];
+  for(let i = 0; i < str.length; i++){
+    newArr.push(str[i]);
+  }
+  return newArr;
+}
+console.log(mySplit("ABC"));
+
+//ReverseString
+
+function reverseString(str){
+  
+  var newString = "";
+
+  for(let i = str.length-1; i >= 0; i--){
+    
+    newString += str[i];
+  }
+  return newString;
+}
+console.log(reverseString("ABCDEF"));

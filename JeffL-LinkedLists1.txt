@@ -1,0 +1,64 @@
+function sll(){
+  this.head = null;
+}
+
+function newNode(val){
+  this.next = null;
+  this.val = val;
+}
+
+node = new newNode(0);
+node1 = new newNode(1);
+node2 = new newNode(2);
+
+node.next = node1;
+node1.next = node2;
+
+console.log(node);
+
+var mySll = new sll();
+mySll.head = node;
+console.log(mySll);
+
+//addFront
+
+function addFront(firstNode, val){
+  var frontNode = new newNode(val)
+  frontNode.next = firstNode;
+  return frontNode;
+}
+console.log(addFront(node, 22));
+
+//removeFront
+
+function removeFront(firstNode){
+  if(firstNode.next === null){
+    return null;
+  }
+  else{
+    return firstNode.next;
+  }
+}
+console.log(node);
+
+//contains
+
+function contains(list, val){
+  if(list){
+    var cur = list.head;
+    while(cur){
+      if(cur.val === val){
+        return true;
+      }
+      cur = cur.next;
+    }
+  }
+  return false;
+}
+console.log(contains(mySll, 2));
+
+//front
+
+function front(list){
+  return list.head.val;
+console.log(front(mySll));

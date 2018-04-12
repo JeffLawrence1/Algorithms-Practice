@@ -1,0 +1,138 @@
+// print 1-255
+
+function print1255(){
+  for (let i = 1; i < 256; i++) {
+  console.log(i);
+}
+}
+
+// print sum 0-255
+
+function printSum(){
+  let sum = 0;
+  for( let i = 0; i <256; i++){
+  console.log(i);
+  sum += i;
+  console.log(sum);
+}
+}
+
+// find and print max
+
+function printMax(arr){
+  let max = arr[0];
+  for(let i =0; i< arr.length; i++){
+    if(max< arr[i]){
+      max = arr[i];
+    }
+  }
+  console.log(max);
+}
+
+// array with odds
+
+function arrayOdd(){
+  let temp = [];
+  for(let i = 1; i<256; i+=2){
+    temp.push(i);
+  }
+  console.log(temp);
+}
+
+// greater than Y
+
+function greaterY(arr, Y){
+  let count = 0;
+  for(let i = 0; i<arr.length; i++){
+    if(arr[i]>Y){
+      count += 1;
+    }
+  }
+  console.log(count);
+}
+
+// max, min, avg
+
+function maxMinAvg(arr){
+  let max = arr[0];
+  let min = arr[0];
+  let sum = 0;
+  for(let i = 0; i < arr.length; i++){
+    if(arr[i]> max){
+      max = arr[i];
+    }
+    if(arr[i]< min){
+      min = arr[i];
+    }
+    sum += arr[i];
+  }
+  let avg = sum/arr.length;
+  console.log(max, min, avg);
+}
+
+// swap string for array negative values
+
+function swapNeg(arr){
+  for(let i = 0; i< arr.length; i++){
+    if(arr[i]<0){
+      arr[i]= "Dojo";
+    }
+  }
+  console.log(arr);
+}
+
+// print odds 1-255
+
+function printOdd(){
+  for(let i = 1; i< 256; i+=2){
+    console.log(i);
+  }
+}
+
+// iterate and print array
+
+function iterArray(arr){
+  for(let i = 0; i< arr.length; i++){
+    console.log(arr[i]);
+  }
+}
+
+// get and print average
+
+function getAvg(arr){
+  let sum = 0;
+  for(let i = 0; i< arr.length; i++){
+    sum += arr[i];
+  }
+  console.log(sum/arr.length);
+}
+
+// square the values
+
+function squareVal(arr){
+  for(let i = 0; i<arr.length; i++){
+    arr[i] = arr[i] * arr[i];
+  }
+  console.log(arr);
+}
+
+// zero out negative numbers
+
+function zeroNeg(arr){
+  for(let i = 0; i< arr.length; i++){
+    if(arr[i]< 0){
+      arr[i]=0;
+    }
+  }
+  console.log(arr);
+}
+
+// shift array values
+
+function shiftVal(arr){
+  for(let i = 0; i<arr.length-1; i++){
+    arr[i]= arr[i + 1];   
+  }
+  arr[arr.length - 1]=0;
+  console.log(arr);
+}

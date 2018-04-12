@@ -1,0 +1,46 @@
+//Remove Blanks
+
+function removeBlanks(str){
+  var newStr = "";
+  for(let i = 0; i < str.length; i++){
+    if(str[i] != " "){
+      newStr += str[i];
+    }
+  }
+  return newStr;
+}
+console.log(removeBlanks("AB CD EF GH"));
+
+//Get String Digits
+
+function getDigits(str){
+  var newString = "";
+  for(let i = 0; i< str.length; i++){
+    if(str.charCodeAt(i) > 47 && str.charCodeAt(i) < 58){
+      newString += str[i];
+    }
+  }
+  return newString;
+}
+console.log(getDigits("1j4k5k3ll5mlih3ml5lk2bgg4"));
+
+//Acronyms
+
+function acronyms(str){
+  var acro = "";
+  for(let i = 0; i < str.length; i++){
+    
+    if(i === 0){
+      acro += str[i];
+    }
+    else if(str[i] === " "){
+      acro += str[i + 1];
+    }
+    else{
+      
+      continue;
+    }
+  }
+  return acro.toUpperCase();
+}
+console.log(acronyms("njlkj yjljl jlk eefj asdf"));
